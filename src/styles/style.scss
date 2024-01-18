@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Rubik Burned', system-ui;
+    background: url(./public/back.jpg);
+    color: rgb(255, 255, 255);
+}
+
+.container{
+height: 100vh;
+display: grid;
+place-items: center;
+    
+}
+.auth{
+    background-color: rgb(168, 40, 147);
+    color: black;
+    width: 60vw;
+    height: 50vh;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 50px;
+ 
+      
+    
+    @media (max-width :700px) {
+
+       width: 90vw;
+    }
+    img{
+        width: 40px;
+    }
+    .text-p{
+        font-size: 30px  ;
+    
+    }
+    
+}
+.butons{
+    display: flex;
+    gap: 5px;
+    .btn{
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        background: #1a1a1a;
+        color: aliceblue;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        cursor: pointer;
+        &:hover{
+            background-color: aliceblue;
+            color: #1a1a1a;
+        }
+        img{
+           width: 40px;
+           border-radius: 50%;
+        }
+    
+}
+}
+
+
+
+.roompage{
+    background-color: rgb(168, 40, 147);
+    width: 60vw;
+    height: 60vh;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 40px;
+    input{
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        box-shadow: 2px 2px 10px;
+        border-radius: 6px;
+        font-size: 20px;
+    }
+    &>button:last-child{
+        background-color: rgb(7, 4, 4);
+        color: white;
+        
+    }
+ 
+   
+    
+    .text-p{
+        font-size: 30px;
+        color: #1a1a1a;
+        font-weight: bold;
+    }
+}
+h1{
+    font-size: 40px;
+    color: #1a1a1a;
+
+}
+button{
+
+    color: #1a1a1a;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    &:hover{
+    filter: brightness(60%);
+    }
+
+}
+.chatpage{
+    background-color: rgb(168, 40, 147);
+    color: antiquewhite;
+    width: 60vw;
+    height: 60vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 800px;
+    overflow: hidden;
+    font-weight: bold;
+    //position: relative;
+    //overflow: auto;
+  // margin-bottom: 40px;
+   //height: 400px;
+   //transition: transform 0.3s ease;
+   
+
+    @media (max-width: 414px) {
+        width: 100vw;
+        height: 100vh;
+        margin: 0; 
+        padding: 0; 
+        overflow: hidden;
+        
+     
+     }
+
+}
+
+.chatpage header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    button{
+        background: orange;
+    }
+}
+.chatpage form{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(168, 86, 155);
+    padding: 10px;
+    gap: 10px;
+    //position: absolute;
+    //bottom: 0;
+    //color: white;
+    //width: 100%;
+    //z-index: 1;
+   
+    
+  
+    
+    input{
+        width: 50%;
+        border: none;
+        border-radius: 15px;
+        padding: 5px;
+        font-size: 15px;
+        box-shadow: 2px 2px 10px;
+     
+    }
+    button{
+        background: orange;
+    }
+}
+
+.chatpage main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 10px;
+    padding: 10px;
+    &::-webkit-scrollbar{
+        background: transparent;
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb{
+       background-color: darkorange;
+        
+    }
+}
+.msg-user{
+    background-color: rgba(106, 63, 226, 0.438);
+    align-self: flex-end;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+}
+.msg-other{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img{
+        width: 40px;
+        border-radius: 50%;
+    }
+    span{
+        font-weight: bold;
+    }
+}
